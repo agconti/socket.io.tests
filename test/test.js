@@ -1,3 +1,5 @@
+'use strict'
+
 var expect = require('chai').expect
   , io = require('socket.io/node_modules/socket.io-client')
   , testMsg = 'HelloWorld'
