@@ -2,30 +2,36 @@ var expect = require('chai').expect
   , io = require('socket.io/node_modules/socket.io-client')
   , testMsg = 'HelloWorld'
   , sender
-  , reciver
+  , receiver
 
 
 
 describe('Chat Events', function(){
   beforeEach(function(done){
-
-    // start the server
+    
+    // start the io server
     var server = require('../index.js').server
+
+    // connect two io clients
     sender = io('http://localhost:3000/')
-    reciver = io('http://localhost:3000/')
+    receiver = io('http://localhost:3000/')
+    
+    // finish beforeEach setup
     done()
   })
   afterEach(function(done){
-    // disconnect clients  
+    
+    // disconnect io clients after each test
     sender.disconnect()
-    reciver.disconnect()
+    receiver.disconnect()
+    
     done()
   })
 
   describe('Message Events', function(){
     it('Clients should receive a message when the `message` event is emited.', function(done){
       sender.emit('message', testMsg)
-      reciver.on('message', function(msg){
+      receiver.on('message', function(msg){
         expect(msg).to.equal(testMsg)
         done()
       })
