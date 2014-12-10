@@ -1,0 +1,16 @@
+{
+  "name": "node_socket_test",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^1.10.0",
+    "express": "^4.10.4",
+    "mocha": "^2.0.1"
+  }
+}
