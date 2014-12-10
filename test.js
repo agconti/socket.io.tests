@@ -26,7 +26,6 @@ describe('Chat Events', function(){
     it('Clients should receive a message when the `message` event is emited.', function(done){
       sender.emit('message', testMsg)
       reciver.on('message', function(msg){
-        console.log(msg)
         expect(msg).to.equal(testMsg)
         done()
       })
