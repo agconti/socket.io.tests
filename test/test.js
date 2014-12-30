@@ -2,6 +2,11 @@
 
 var expect = require('chai').expect
   , io = require('socket.io/node_modules/socket.io-client')
+  ,ioOptions = { 
+      transports: ['websocket']
+    , forceNew: true
+    , reconnection: false
+  }
   , testMsg = 'HelloWorld'
   , sender
   , receiver
@@ -15,8 +20,8 @@ describe('Chat Events', function(){
     var server = require('../index.js').server
 
     // connect two io clients
-    sender = io('http://localhost:3000/')
-    receiver = io('http://localhost:3000/')
+    sender = io('http://localhost:3000/', ioOptions)
+    receiver = io('http://localhost:3000/', ioOptions)
     
     // finish beforeEach setup
     done()
@@ -26,7 +31,6 @@ describe('Chat Events', function(){
     // disconnect io clients after each test
     sender.disconnect()
     receiver.disconnect()
-    
     done()
   })
 
