@@ -2,7 +2,7 @@
 
 var expect = require('chai').expect
   , io = require('socket.io/node_modules/socket.io-client')
-  ,ioOptions = { 
+  , ioOptions = { 
       transports: ['websocket']
     , forceNew: true
     , reconnection: false
