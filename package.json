@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha test",
     "start": "node index.js",
-    "debug": "DEBUG=* node app.js"
+    "debug": "DEBUG=* mocha test"
   },
   "author": "",
   "license": "ISC",
