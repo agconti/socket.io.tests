@@ -19,7 +19,7 @@ You'll see something like this:
 
 ![socketio_testing](media/socketio_testing.gif)
 
-Are your tests failig but you dont know why? Try the handy debug test command:
+Want more information? Use the handy debug test command:
 
 ```
 npm run debugTest
