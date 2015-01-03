@@ -1,4 +1,4 @@
-var app = require('../../app').server
+var app = require('../../index').server
   , port = process.env.PORT
   , server
   , eio
@@ -11,7 +11,7 @@ var app = require('../../app').server
 exports.start = function(callback){
     
   // start the io server
-  io = require('../../app').io
+  io = require('../../index').io
   eio = io.engine
   server = app.listen(port)
 
