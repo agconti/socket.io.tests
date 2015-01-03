@@ -12,3 +12,4 @@ io.on('connection', function(socket){
 
 // export the server so it can be easily called for testing
 exports.server = http.listen(port)
+exports.io = io
