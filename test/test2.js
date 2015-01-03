@@ -23,16 +23,18 @@ describe('Chat Events', function(){
     done()
   })
   afterEach(function(done){
-    server.stop(done)
+    server.stop(done)  
   })
 
   describe('Message Events', function(){
     it('Clients should receive a message when the `message` event is emited.', function(done){
       sender.emit('message', testMsg)
       receiver.on('message', function(msg){
-        console.log(1)
-        expect(msg).to.equal(testMsg)
-        done()
+        setTimeout(function(){   
+          console.log(2)
+          expect(msg).to.equal(testMsg)
+          done()
+        }, 2000)
       })
     })
   })
