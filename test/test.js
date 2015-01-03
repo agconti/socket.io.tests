@@ -27,10 +27,7 @@ describe('Chat Events', function(){
     done()
   })
   afterEach(function(done){
-    
-    // disconnect io clients after each test
-    sender.disconnect()
-    receiver.disconnect()
+    server.stop(done)  
     done()
   })
 
