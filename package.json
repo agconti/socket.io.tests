@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test",
     "start": "node index.js",
-    "debugTest": "DEBUG=* mocha test"
+    "test": "mocha test",
+    "test-debug": "DEBUG=* mocha test"
   },
   "author": "",
   "license": "ISC",

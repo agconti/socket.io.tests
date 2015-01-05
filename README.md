@@ -22,7 +22,7 @@ You'll see something like this:
 Want more information? Use the handy debug test command:
 
 ```
-npm run debugTest
+npm run test-debug
 ```
 
 ![debug_testing](media/debug_testing.gif)
