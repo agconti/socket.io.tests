@@ -1,8 +1,8 @@
 'use strict'
 
 var expect = require('chai').expect
-  , server = require('./utils/server')
-  , io = require('socket.io/node_modules/socket.io-client')
+  , server = require('../index')
+  , io = require('socket.io-client')
   , ioOptions = { 
       transports: ['websocket']
     , forceNew: true
